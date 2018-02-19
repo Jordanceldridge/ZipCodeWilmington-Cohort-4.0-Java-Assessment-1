@@ -11,7 +11,7 @@ public class IntegerArrayUtilsTest {
     public void getSumTest() {
         // : Given
         Integer[] input = { 1, 2, 3, 4, 5};
-        Integer expected = 12;
+        Integer expected = 15;
 
         // : When
         Integer actual = IntegerArrayUtils.getSum(input);

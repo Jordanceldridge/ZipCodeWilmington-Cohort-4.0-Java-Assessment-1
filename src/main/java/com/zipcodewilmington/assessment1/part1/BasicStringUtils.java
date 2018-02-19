@@ -9,7 +9,9 @@ public class BasicStringUtils {
      * @return string with identical content, and the first character capitalized
      */
     public static String camelCase(String str) {
-        return null;
+        Character firstC = str.charAt(0);
+        String firstCharacter = firstC.toString().toUpperCase();
+        return firstCharacter + str.substring(1);
     }
 
     /**
@@ -17,7 +19,8 @@ public class BasicStringUtils {
      * @return string with identical contents, in the reverse order
      */
     public static String reverse(String str) {
-        return null;
+        StringBuilder newString = new StringBuilder(str);
+        return newString.reverse().toString();
     }
 
     /**
@@ -25,16 +28,25 @@ public class BasicStringUtils {
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
-        return null;
+        StringBuilder newString = new StringBuilder(str);
+        return newString.reverse().toString();
+
     }
+
 
 
     /**
      * @param str a string input from user
      * @return string with identical contents excluding first and last character
      */
+
     public static String removeFirstAndLastCharacter(String str) {
-        return null;
+        int length = str.length();
+        int lastIndex = length - 1;
+        int firstindex = length -14;
+        String suffix = str.substring(firstindex,lastIndex);
+        return suffix;
+
     }
 
     /**
@@ -42,6 +54,22 @@ public class BasicStringUtils {
      * @return string with identical characters, each with opposite casing
      */
     public static String invertCasing(String str) {
-        return null;
+        char[] character = str.toCharArray();
+        for (int i = 0; i < character.length; i++)
+        {
+            char c = character[i];
+            if (Character.isUpperCase(c))
+            {
+                character[i] = Character.toLowerCase(c);
+            }
+            else if (Character.isLowerCase(c))
+            {
+                character[i] = Character.toUpperCase(c);
+            }
+        }
+        return new String(character);
+
+
+
     }
 }
