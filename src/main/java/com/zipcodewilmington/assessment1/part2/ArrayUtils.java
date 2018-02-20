@@ -29,7 +29,12 @@ public class ArrayUtils {
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
         return null;
 
-    }
+
+
+        }
+
+
+
 
     /**
      * @param objectArray an array of any type of Object
@@ -37,13 +42,9 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
-        int counter = 0;
-        for (int i = 0; i < objectArray.length; i++) {
-            if (objectArray[i].equals(objectArray)) {
-                counter++;
-            }
-        }
-        return counter;
+
+
+        return null;
     }
 
 

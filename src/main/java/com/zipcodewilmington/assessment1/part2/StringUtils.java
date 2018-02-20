@@ -11,7 +11,12 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+        String newSentence = sentence;
+        String[] words = newSentence.split(" ");
+
+
+        return words;
+
     }
 
 
@@ -21,7 +26,13 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+        String firstWord = sentence;
+        if (firstWord.contains(" ")) {
+            firstWord = firstWord.substring(0, firstWord.indexOf(" "));
+            //System.out.println(firstWord);
+        }
+
+        return firstWord;
     }
 
     /**
@@ -30,7 +41,16 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        return null;
+        String firstWord = sentence;
+        if (firstWord.contains(" ")) {
+            firstWord = firstWord.substring(0, firstWord.indexOf(" "));
+            
+
+
+
+        }
+
+        return firstWord ;
     }
 
     /**
@@ -39,8 +59,24 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
-        return null;
+
+        StringBuilder newString = new StringBuilder();
+        String rev = new StringBuilder(sentence).reverse().toString();
+        if (rev.contains(" ")) {
+            rev = rev.substring(rev.indexOf(" "));
+
+
+            //System.out.println(firstWord);
+        }
+
+
+        rev = Character.toUpperCase(rev.charAt(0)) + rev.substring(1);
+        newString.append(rev);
+
+        return newString.toString();
     }
+
+
 
 
     /**
